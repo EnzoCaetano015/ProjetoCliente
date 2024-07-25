@@ -1,0 +1,13 @@
+<h2>Editar Cliente</h2>
+<form action="/customers/<%= customer.idcliente %>/edit" method="POST">
+    <label for="name">Nome:</label>
+    <input type="text" name="nome" value="<%= customer.nome %>" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" value="<%= customer.email %>" required><br>
+
+    <label for="phone">Telefone:</label>
+    <input type="text" name="telefone" value="<%= customer.telefone %>"><br>
+
+    <button type="submit">Salvar</button>
+</form>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <main>
+        <h2>Lista de Clientes</h2>
+
+      
+        <table id="customers">
+        <tr>
+            <% customers.forEach(customer => { %>
+                <td>
+                    <a class="name" href="/customers/<%= customer.idcliente %>"><%= customer.nome %></a>
+                    <br>
+                    <form action="/customers/<%= customer.idcliente %>/delete" method="POST" style="display:inline;">
+                        <button class="listbtn" type="submit">Delete</button>
+                    </form>
+                </td>
+            <% }) %>
+            </tr>
+    </table>
+    <a class="list" href="/customers/create">Adicionar Cliente</a>
+   
+    </main>
+</body>
+</html>
